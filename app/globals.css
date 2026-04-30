@@ -1,26 +1,474 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Prata&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fffaf4;
+  --foreground: #4d2734;
+  --color-wine: #6d2039;
+  --color-gold: #d6ad62;
+  --color-blush: #f3c8d0;
+  --color-ivory: #fffaf4;
+  --color-champagne: #dcc59a;
+  --color-rose: #e8a0b0;
+  --color-dusty-rose: #c97a8e;
+  --color-peach: #f0c9a8;
+  --font-sans: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  --font-serif: "Prata", "Georgia", serif;
+
+  /* ─── Rose (full bloom, layered petals) ─── */
+  --flower-rose: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 420' fill='none'%3E%3Cg transform='translate(210,210)'%3E%3Cellipse cx='0' cy='-68' rx='38' ry='62' fill='%23e8a0b0' fill-opacity='.18'/%3E%3Cellipse cx='0' cy='-68' rx='38' ry='62' transform='rotate(40)' fill='%23c97a8e' fill-opacity='.16'/%3E%3Cellipse cx='0' cy='-68' rx='38' ry='62' transform='rotate(80)' fill='%23e8a0b0' fill-opacity='.18'/%3E%3Cellipse cx='0' cy='-68' rx='38' ry='62' transform='rotate(120)' fill='%23c97a8e' fill-opacity='.14'/%3E%3Cellipse cx='0' cy='-68' rx='38' ry='62' transform='rotate(160)' fill='%23e8a0b0' fill-opacity='.18'/%3E%3Cellipse cx='0' cy='-68' rx='38' ry='62' transform='rotate(200)' fill='%23f3c8d0' fill-opacity='.16'/%3E%3Cellipse cx='0' cy='-68' rx='38' ry='62' transform='rotate(240)' fill='%23c97a8e' fill-opacity='.14'/%3E%3Cellipse cx='0' cy='-68' rx='38' ry='62' transform='rotate(280)' fill='%23e8a0b0' fill-opacity='.18'/%3E%3Cellipse cx='0' cy='-68' rx='38' ry='62' transform='rotate(320)' fill='%23f3c8d0' fill-opacity='.16'/%3E%3Cellipse cx='0' cy='-44' rx='24' ry='40' fill='%23c97a8e' fill-opacity='.2'/%3E%3Cellipse cx='0' cy='-44' rx='24' ry='40' transform='rotate(45)' fill='%23e8a0b0' fill-opacity='.18'/%3E%3Cellipse cx='0' cy='-44' rx='24' ry='40' transform='rotate(90)' fill='%23c97a8e' fill-opacity='.2'/%3E%3Cellipse cx='0' cy='-44' rx='24' ry='40' transform='rotate(135)' fill='%23f3c8d0' fill-opacity='.16'/%3E%3Cellipse cx='0' cy='-44' rx='24' ry='40' transform='rotate(180)' fill='%23c97a8e' fill-opacity='.2'/%3E%3Cellipse cx='0' cy='-44' rx='24' ry='40' transform='rotate(225)' fill='%23e8a0b0' fill-opacity='.18'/%3E%3Cellipse cx='0' cy='-44' rx='24' ry='40' transform='rotate(270)' fill='%23c97a8e' fill-opacity='.2'/%3E%3Cellipse cx='0' cy='-44' rx='24' ry='40' transform='rotate(315)' fill='%23f3c8d0' fill-opacity='.16'/%3E%3Ccircle r='18' fill='%236d2039' fill-opacity='.2'/%3E%3Ccircle r='8' fill='%23d6ad62' fill-opacity='.3'/%3E%3C/g%3E%3C/svg%3E");
+
+  /* ─── Lily (trumpet-shaped, 6 petals, pointy tips) ─── */
+  --flower-lily: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 380' fill='none'%3E%3Cg transform='translate(190,190)'%3E%3Cellipse cx='0' cy='-72' rx='16' ry='70' fill='%23f0c9a8' fill-opacity='.22'/%3E%3Cellipse cx='0' cy='-72' rx='16' ry='70' transform='rotate(60)' fill='%23dcc59a' fill-opacity='.2'/%3E%3Cellipse cx='0' cy='-72' rx='16' ry='70' transform='rotate(120)' fill='%23f0c9a8' fill-opacity='.22'/%3E%3Cellipse cx='0' cy='-72' rx='16' ry='70' transform='rotate(180)' fill='%23dcc59a' fill-opacity='.2'/%3E%3Cellipse cx='0' cy='-72' rx='16' ry='70' transform='rotate(240)' fill='%23f0c9a8' fill-opacity='.22'/%3E%3Cellipse cx='0' cy='-72' rx='16' ry='70' transform='rotate(300)' fill='%23dcc59a' fill-opacity='.2'/%3E%3Cellipse cx='0' cy='-50' rx='9' ry='48' fill='%23f3c8d0' fill-opacity='.16'/%3E%3Cellipse cx='0' cy='-50' rx='9' ry='48' transform='rotate(60)' fill='%23e8a0b0' fill-opacity='.14'/%3E%3Cellipse cx='0' cy='-50' rx='9' ry='48' transform='rotate(120)' fill='%23f3c8d0' fill-opacity='.16'/%3E%3Cellipse cx='0' cy='-50' rx='9' ry='48' transform='rotate(180)' fill='%23e8a0b0' fill-opacity='.14'/%3E%3Cellipse cx='0' cy='-50' rx='9' ry='48' transform='rotate(240)' fill='%23f3c8d0' fill-opacity='.16'/%3E%3Cellipse cx='0' cy='-50' rx='9' ry='48' transform='rotate(300)' fill='%23e8a0b0' fill-opacity='.14'/%3E%3Ccircle r='14' fill='%23d6ad62' fill-opacity='.28'/%3E%3Ccircle r='5' fill='%236d2039' fill-opacity='.2'/%3E%3C/g%3E%3C/svg%3E");
+
+  /* ─── Marigold (dense ruffled petals, many layers) ─── */
+  --flower-marigold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' fill='none'%3E%3Cg transform='translate(200,200)'%3E%3Cellipse cx='0' cy='-58' rx='14' ry='52' fill='%23d6ad62' fill-opacity='.22'/%3E%3Cellipse cx='0' cy='-58' rx='14' ry='52' transform='rotate(22.5)' fill='%23f0c9a8' fill-opacity='.2'/%3E%3Cellipse cx='0' cy='-58' rx='14' ry='52' transform='rotate(45)' fill='%23d6ad62' fill-opacity='.22'/%3E%3Cellipse cx='0' cy='-58' rx='14' ry='52' transform='rotate(67.5)' fill='%23dcc59a' fill-opacity='.2'/%3E%3Cellipse cx='0' cy='-58' rx='14' ry='52' transform='rotate(90)' fill='%23d6ad62' fill-opacity='.22'/%3E%3Cellipse cx='0' cy='-58' rx='14' ry='52' transform='rotate(112.5)' fill='%23f0c9a8' fill-opacity='.2'/%3E%3Cellipse cx='0' cy='-58' rx='14' ry='52' transform='rotate(135)' fill='%23d6ad62' fill-opacity='.22'/%3E%3Cellipse cx='0' cy='-58' rx='14' ry='52' transform='rotate(157.5)' fill='%23dcc59a' fill-opacity='.2'/%3E%3Cellipse cx='0' cy='-40' rx='10' ry='36' fill='%23d6ad62' fill-opacity='.26'/%3E%3Cellipse cx='0' cy='-40' rx='10' ry='36' transform='rotate(22.5)' fill='%23f0c9a8' fill-opacity='.22'/%3E%3Cellipse cx='0' cy='-40' rx='10' ry='36' transform='rotate(45)' fill='%23d6ad62' fill-opacity='.26'/%3E%3Cellipse cx='0' cy='-40' rx='10' ry='36' transform='rotate(67.5)' fill='%23dcc59a' fill-opacity='.22'/%3E%3Cellipse cx='0' cy='-40' rx='10' ry='36' transform='rotate(90)' fill='%23d6ad62' fill-opacity='.26'/%3E%3Cellipse cx='0' cy='-40' rx='10' ry='36' transform='rotate(112.5)' fill='%23f0c9a8' fill-opacity='.22'/%3E%3Cellipse cx='0' cy='-40' rx='10' ry='36' transform='rotate(135)' fill='%23d6ad62' fill-opacity='.26'/%3E%3Cellipse cx='0' cy='-40' rx='10' ry='36' transform='rotate(157.5)' fill='%23dcc59a' fill-opacity='.22'/%3E%3Ccircle r='22' fill='%23d6ad62' fill-opacity='.3'/%3E%3Ccircle r='10' fill='%236d2039' fill-opacity='.22'/%3E%3C/g%3E%3C/svg%3E");
+
+  /* ─── Hibiscus (wide 5-petal tropical, prominent stamen) ─── */
+  --flower-hibiscus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 460 460' fill='none'%3E%3Cg transform='translate(230,230)'%3E%3Cellipse cx='0' cy='-82' rx='44' ry='78' fill='%23c97a8e' fill-opacity='.14'/%3E%3Cellipse cx='0' cy='-82' rx='44' ry='78' transform='rotate(72)' fill='%236d2039' fill-opacity='.12'/%3E%3Cellipse cx='0' cy='-82' rx='44' ry='78' transform='rotate(144)' fill='%23c97a8e' fill-opacity='.14'/%3E%3Cellipse cx='0' cy='-82' rx='44' ry='78' transform='rotate(216)' fill='%236d2039' fill-opacity='.12'/%3E%3Cellipse cx='0' cy='-82' rx='44' ry='78' transform='rotate(288)' fill='%23c97a8e' fill-opacity='.14'/%3E%3Ccircle r='28' fill='%23d6ad62' fill-opacity='.2'/%3E%3Cline x1='0' y1='0' x2='0' y2='-46' stroke='%236d2039' stroke-opacity='.14' stroke-width='2'/%3E%3Cline x1='0' y1='0' x2='14' y2='-44' stroke='%236d2039' stroke-opacity='.12' stroke-width='1.5'/%3E%3Cline x1='0' y1='0' x2='-14' y2='-44' stroke='%236d2039' stroke-opacity='.12' stroke-width='1.5'/%3E%3Ccircle cx='0' cy='-48' r='4' fill='%23d6ad62' fill-opacity='.3'/%3E%3Ccircle cx='14' cy='-46' r='3' fill='%23d6ad62' fill-opacity='.28'/%3E%3Ccircle cx='-14' cy='-46' r='3' fill='%23d6ad62' fill-opacity='.28'/%3E%3C/g%3E%3C/svg%3E");
+
+  /* ─── Lavender (tall spike, tiny florets along stem) ─── */
+  --flower-lavender: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 480' fill='none'%3E%3Cg transform='translate(100,420)'%3E%3Cline x1='0' y1='0' x2='0' y2='-320' stroke='%234a7a4a' stroke-opacity='.12' stroke-width='2.5'/%3E%3Cellipse cx='-12' cy='-180' rx='10' ry='18' fill='%239b8bbf' fill-opacity='.18' transform='rotate(-20,-12,-180)'/%3E%3Cellipse cx='12' cy='-192' rx='10' ry='18' fill='%23b8a8d4' fill-opacity='.16' transform='rotate(20,12,-192)'/%3E%3Cellipse cx='-10' cy='-210' rx='10' ry='18' fill='%239b8bbf' fill-opacity='.18' transform='rotate(-18,-10,-210)'/%3E%3Cellipse cx='10' cy='-222' rx='10' ry='18' fill='%23b8a8d4' fill-opacity='.16' transform='rotate(18,10,-222)'/%3E%3Cellipse cx='-8' cy='-238' rx='9' ry='16' fill='%239b8bbf' fill-opacity='.2' transform='rotate(-15,-8,-238)'/%3E%3Cellipse cx='8' cy='-250' rx='9' ry='16' fill='%23b8a8d4' fill-opacity='.18' transform='rotate(15,8,-250)'/%3E%3Cellipse cx='-6' cy='-265' rx='8' ry='14' fill='%239b8bbf' fill-opacity='.22' transform='rotate(-12,-6,-265)'/%3E%3Cellipse cx='6' cy='-276' rx='8' ry='14' fill='%23b8a8d4' fill-opacity='.2' transform='rotate(12,6,-276)'/%3E%3Cellipse cx='-4' cy='-290' rx='7' ry='12' fill='%239b8bbf' fill-opacity='.24'/%3E%3Cellipse cx='4' cy='-300' rx='7' ry='12' fill='%23b8a8d4' fill-opacity='.22'/%3E%3Cellipse cx='0' cy='-312' rx='6' ry='10' fill='%239b8bbf' fill-opacity='.26'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
 }
 
 body {
-  background: var(--background);
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(180deg, #fffdf9 0%, #fff7f0 44%, var(--color-ivory) 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -3;
+  background:
+    radial-gradient(circle at 10% 8%, rgba(214, 173, 98, 0.26) 0 3rem, transparent 3.08rem),
+    radial-gradient(circle at 86% 20%, rgba(243, 200, 208, 0.18) 0 4.4rem, transparent 4.5rem),
+    radial-gradient(circle at 88% 78%, rgba(201, 122, 142, 0.12) 0 3rem, transparent 3.1rem),
+    radial-gradient(circle at 16% 82%, rgba(220, 197, 154, 0.22) 0 4rem, transparent 4.1rem),
+    linear-gradient(118deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 255, 255, 0.24) 28%, rgba(243, 200, 208, 0.08) 56%, rgba(255, 255, 255, 0) 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+::selection {
+  background: rgba(109, 32, 57, 0.18);
+  color: #4a1c2d;
+}
+
+a,
+button {
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease,
+    transform 220ms ease,
+    opacity 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+  letter-spacing: -0.035em;
+}
+
+.hero-title {
+  text-shadow: 0 18px 45px rgba(76, 20, 37, 0.12);
+}
+
+.metallic-text {
+  background: linear-gradient(135deg, #b88329 0%, #f4e2b7 45%, #c89637 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-pill {
+  scrollbar-width: none;
+}
+
+.nav-pill::-webkit-scrollbar {
+  display: none;
+}
+
+.section-shell {
+  position: relative;
+}
+
+.section-shell::before {
+  content: "";
+  position: absolute;
+  inset-inline: 1.5rem;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(214, 173, 98, 0.45), transparent);
+}
+
+.surface-card {
+  background: rgba(255, 250, 244, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.84);
+  box-shadow: 0 28px 80px rgba(83, 34, 49, 0.11);
+  backdrop-filter: blur(18px);
+}
+
+.deep-card {
+  background: linear-gradient(145deg, rgba(109, 32, 57, 0.96) 0%, rgba(152, 86, 109, 0.93) 62%, rgba(214, 173, 98, 0.94) 180%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 30px 90px rgba(57, 13, 29, 0.24);
+}
+
+.photo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+  background: #f8f0e6;
+  box-shadow: 0 24px 70px rgba(75, 29, 43, 0.16);
+}
+
+.photo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.panel-wash {
+  position: relative;
+}
+
+.panel-wash::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.18) 0%, transparent 48%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.countdown-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.08) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 18px 50px rgba(44, 11, 22, 0.18);
+}
+
+/* ═══════════════════════════════════════════════
+   FLOATING ORBS
+═══════════════════════════════════════════════ */
+
+.float-bloom {
+  animation: bloom-float 14s ease-in-out infinite;
+}
+
+.float-bloom-delayed {
+  animation: bloom-float 18s ease-in-out infinite reverse;
+}
+
+/* ═══════════════════════════════════════════════
+   PAGE ATMOSPHERE — SCATTERED FLOWERS
+   Five different flower types placed loosely,
+   large and faint, at varied spots on the page.
+   No symmetry, no coordination — organic feel.
+═══════════════════════════════════════════════ */
+
+.page-atmosphere {
+  position: relative;
+}
+
+.page-atmosphere > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Rose 1: top-left, tilted, large ── */
+.page-atmosphere .flower-rose-1 {
+  position: absolute;
+  left: -6rem;
+  top: -4rem;
+  width: 32rem;
+  height: 32rem;
+  background: var(--flower-rose) center / contain no-repeat;
+  opacity: 0.55;
+  transform: rotate(-22deg);
+  animation: sway-gentle 18s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Lily: right side, upper third, slightly off-angle ── */
+.page-atmosphere .flower-lily-1 {
+  position: absolute;
+  right: -5rem;
+  top: 18%;
+  width: 28rem;
+  height: 28rem;
+  background: var(--flower-lily) center / contain no-repeat;
+  opacity: 0.5;
+  transform: rotate(14deg);
+  animation: sway-gentle 22s ease-in-out infinite reverse;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Marigold: bottom-left, large ── */
+.page-atmosphere .flower-marigold-1 {
+  position: absolute;
+  left: -4rem;
+  bottom: 12%;
+  width: 30rem;
+  height: 30rem;
+  background: var(--flower-marigold) center / contain no-repeat;
+  opacity: 0.48;
+  transform: rotate(8deg);
+  animation: spin-lazy 40s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Hibiscus: bottom-right, biggest ── */
+.page-atmosphere .flower-hibiscus-1 {
+  position: absolute;
+  right: -7rem;
+  bottom: 6%;
+  width: 36rem;
+  height: 36rem;
+  background: var(--flower-hibiscus) center / contain no-repeat;
+  opacity: 0.45;
+  transform: rotate(-10deg);
+  animation: sway-gentle 26s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Lavender: mid-right, tall and slender ── */
+.page-atmosphere .flower-lavender-1 {
+  position: absolute;
+  right: 8%;
+  top: 42%;
+  width: 14rem;
+  height: 34rem;
+  background: var(--flower-lavender) center / contain no-repeat;
+  opacity: 0.52;
+  transform: rotate(5deg);
+  animation: sway-gentle 14s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Rose 2: small, mid-left ── */
+.page-atmosphere .flower-rose-2 {
+  position: absolute;
+  left: 4%;
+  top: 46%;
+  width: 20rem;
+  height: 20rem;
+  background: var(--flower-rose) center / contain no-repeat;
+  opacity: 0.38;
+  transform: rotate(34deg);
+  animation: sway-gentle 30s ease-in-out infinite reverse;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Marigold 2: top-right corner, smaller ── */
+.page-atmosphere .flower-marigold-2 {
+  position: absolute;
+  right: -3rem;
+  top: -2rem;
+  width: 22rem;
+  height: 22rem;
+  background: var(--flower-marigold) center / contain no-repeat;
+  opacity: 0.42;
+  transform: rotate(-18deg);
+  animation: spin-lazy 55s linear infinite reverse;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Lily 2: lower center, faint ── */
+.page-atmosphere .flower-lily-2 {
+  position: absolute;
+  left: 38%;
+  bottom: 8%;
+  width: 24rem;
+  height: 24rem;
+  background: var(--flower-lily) center / contain no-repeat;
+  opacity: 0.36;
+  transform: rotate(-8deg);
+  animation: sway-gentle 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Hibiscus 2: upper center-left, small and faint ── */
+.page-atmosphere .flower-hibiscus-2 {
+  position: absolute;
+  left: 22%;
+  top: 8%;
+  width: 18rem;
+  height: 18rem;
+  background: var(--flower-hibiscus) center / contain no-repeat;
+  opacity: 0.3;
+  transform: rotate(28deg);
+  animation: sway-gentle 34s ease-in-out infinite reverse;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Lavender 2: bottom-left area ── */
+.page-atmosphere .flower-lavender-2 {
+  position: absolute;
+  left: 14%;
+  bottom: 2%;
+  width: 10rem;
+  height: 26rem;
+  background: var(--flower-lavender) center / contain no-repeat;
+  opacity: 0.44;
+  transform: rotate(-6deg);
+  animation: sway-gentle 16s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Background wash layer (static, very faint) ── */
+.page-atmosphere::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.3;
+  background:
+    var(--flower-rose)        left -5rem top -3rem   / 30rem 30rem no-repeat,
+    var(--flower-lily)        right -4rem top 15%    / 26rem 26rem no-repeat,
+    var(--flower-marigold)    left -3rem bottom 10%  / 28rem 28rem no-repeat,
+    var(--flower-hibiscus)    right -6rem bottom 5%  / 34rem 34rem no-repeat,
+    var(--flower-lavender)    right 7% top 40%       / 12rem 32rem no-repeat;
+}
+
+/* ═══════════════════════════════════════════════
+   PATTERN UTILITY CLASSES
+═══════════════════════════════════════════════ */
+
+.pattern-orbit {
+  background:
+    var(--flower-rose) left top / 20rem 20rem no-repeat,
+    var(--flower-marigold) right bottom / 18rem 18rem no-repeat,
+    radial-gradient(circle at 50% 50%, transparent 0 4.8rem, rgba(214, 173, 98, 0.22) 4.86rem 5rem, transparent 5.12rem);
+}
+
+.pattern-petals {
+  background:
+    var(--flower-lily) left top 10% / 16rem 16rem no-repeat,
+    var(--flower-hibiscus) right bottom / 20rem 20rem no-repeat,
+    radial-gradient(circle at 18% 84%, rgba(214, 173, 98, 0.22) 0 3rem, transparent 3.1rem);
+}
+
+.pattern-lattice {
+  background:
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0) 0 22px, rgba(255, 255, 255, 0.08) 22px 23px, rgba(255, 255, 255, 0) 23px 44px),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0) 0 22px, rgba(255, 255, 255, 0.06) 22px 23px, rgba(255, 255, 255, 0) 23px 44px),
+    var(--flower-rose) center / 18rem 18rem no-repeat;
+}
+
+.pattern-whisper {
+  background:
+    var(--flower-lavender) right top / 10rem 24rem no-repeat,
+    var(--flower-marigold) left bottom / 14rem 14rem no-repeat,
+    radial-gradient(circle at 24% 24%, rgba(214, 173, 98, 0.24) 0 1.2rem, transparent 1.3rem),
+    radial-gradient(circle at 72% 76%, rgba(243, 200, 208, 0.2) 0 1.5rem, transparent 1.6rem);
+}
+
+/* ═══════════════════════════════════════════════
+   FLOWER ANIMATIONS
+═══════════════════════════════════════════════ */
+
+/* Gentle side-to-side sway, like a breeze */
+@keyframes sway-gentle {
+  0%, 100% {
+    transform-origin: center bottom;
+    transform: rotate(var(--sway-base, 0deg)) translateY(0);
+  }
+  25% {
+    transform: rotate(calc(var(--sway-base, 0deg) - 4deg)) translateY(-6px);
+  }
+  50% {
+    transform: rotate(calc(var(--sway-base, 0deg) + 3deg)) translateY(-10px);
+  }
+  75% {
+    transform: rotate(calc(var(--sway-base, 0deg) - 2deg)) translateY(-4px);
+  }
+}
+
+/* Very slow, almost imperceptible spin — marigold/dahlia */
+@keyframes spin-lazy {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* General orb float */
+@keyframes bloom-float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.06);
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   REDUCED MOTION
+═══════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  a,
+  button,
+  .float-bloom,
+  .float-bloom-delayed,
+  .flower-rose-1,
+  .flower-rose-2,
+  .flower-lily-1,
+  .flower-lily-2,
+  .flower-marigold-1,
+  .flower-marigold-2,
+  .flower-hibiscus-1,
+  .flower-hibiscus-2,
+  .flower-lavender-1,
+  .flower-lavender-2 {
+    animation: none !important;
+    transition: none !important;
+  }
 }

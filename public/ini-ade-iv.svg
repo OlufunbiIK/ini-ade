@@ -1,0 +1,93 @@
+<svg width="1200" height="1600" viewBox="0 0 1200 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="600" y1="0" x2="600" y2="1600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF9"/>
+      <stop offset="0.55" stop-color="#FFF7EE"/>
+      <stop offset="1" stop-color="#FFFBF6"/>
+    </linearGradient>
+    <linearGradient id="line" x1="178" y1="0" x2="1022" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D7B06C"/>
+      <stop offset="0.5" stop-color="#F1DCAA"/>
+      <stop offset="1" stop-color="#CFA15A"/>
+    </linearGradient>
+    <radialGradient id="gold" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(161 210) rotate(90) scale(72 72)">
+      <stop stop-color="#F1DCA0"/>
+      <stop offset="1" stop-color="#F1DCA0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sage" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1030 238) rotate(90) scale(122 122)">
+      <stop stop-color="#D8E0D5"/>
+      <stop offset="1" stop-color="#D8E0D5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blush" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1010 1256) rotate(90) scale(118 118)">
+      <stop stop-color="#F2D5DC"/>
+      <stop offset="1" stop-color="#F2D5DC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="1600" rx="52" fill="url(#bg)"/>
+  <rect x="38" y="38" width="1124" height="1524" rx="34" stroke="#E9DED3" stroke-width="2"/>
+  <rect x="74" y="74" width="1052" height="1452" rx="26" stroke="#F3EBE2"/>
+
+  <circle cx="161" cy="210" r="72" fill="url(#gold)"/>
+  <circle cx="1030" cy="238" r="122" fill="url(#sage)"/>
+  <circle cx="1010" cy="1256" r="118" fill="url(#blush)"/>
+
+  <ellipse cx="154" cy="167" rx="48" ry="96" transform="rotate(-22 154 167)" fill="#D8E0D5" fill-opacity="0.26"/>
+  <ellipse cx="228" cy="198" rx="38" ry="82" transform="rotate(18 228 198)" fill="#D8E0D5" fill-opacity="0.22"/>
+  <ellipse cx="996" cy="1387" rx="56" ry="106" transform="rotate(22 996 1387)" fill="#D8E0D5" fill-opacity="0.22"/>
+  <ellipse cx="1070" cy="1330" rx="44" ry="92" transform="rotate(-18 1070 1330)" fill="#D8E0D5" fill-opacity="0.18"/>
+
+  <circle cx="600" cy="176" r="64" stroke="#E8D5B1"/>
+  <circle cx="600" cy="176" r="18" fill="#F0D79B"/>
+  <ellipse cx="600" cy="102" rx="18" ry="46" fill="#D6DED2" fill-opacity="0.56"/>
+  <ellipse cx="546" cy="210" rx="18" ry="46" transform="rotate(-48 546 210)" fill="#D6DED2" fill-opacity="0.4"/>
+  <ellipse cx="654" cy="210" rx="18" ry="46" transform="rotate(48 654 210)" fill="#D6DED2" fill-opacity="0.4"/>
+  <ellipse cx="600" cy="252" rx="18" ry="46" fill="#F2D9A2" fill-opacity="0.5"/>
+
+  <text x="600" y="292" text-anchor="middle" fill="#A97A33" font-size="26" font-family="Arial, Helvetica, sans-serif" letter-spacing="8">DIGITAL INVITATION</text>
+  <text x="600" y="348" text-anchor="middle" fill="#7A6470" font-size="24" font-family="Arial, Helvetica, sans-serif" letter-spacing="6">WEDDING CELEBRATION IN IJEBU IGBO</text>
+
+  <text x="600" y="510" text-anchor="middle" fill="#4F2433" font-size="96" font-family="Georgia, Times New Roman, serif">Inioluwa Rhoda</text>
+  <text x="600" y="610" text-anchor="middle" fill="#C89B46" font-size="72" font-family="Georgia, Times New Roman, serif">&amp;</text>
+  <text x="600" y="720" text-anchor="middle" fill="#4F2433" font-size="96" font-family="Georgia, Times New Roman, serif">Adeboye Amos</text>
+
+  <text x="600" y="812" text-anchor="middle" fill="#6E5A63" font-size="28" font-family="Arial, Helvetica, sans-serif" letter-spacing="2">
+    warmly invite you to celebrate the beginning of forever
+  </text>
+
+  <line x1="178" y1="892" x2="1022" y2="892" stroke="url(#line)" stroke-width="2"/>
+
+  <rect x="132" y="952" width="294" height="236" rx="28" fill="white" fill-opacity="0.84" stroke="#E9DED3"/>
+  <rect x="454" y="952" width="294" height="236" rx="28" fill="#FFF7FA" stroke="#F0DDE3"/>
+  <rect x="776" y="952" width="294" height="236" rx="28" fill="#FFF9F1" stroke="#EDE2D0"/>
+
+  <text x="164" y="1000" fill="#A97A33" font-size="20" font-family="Arial, Helvetica, sans-serif" letter-spacing="5">FRIDAY</text>
+  <text x="164" y="1058" fill="#4F2433" font-size="52" font-family="Georgia, Times New Roman, serif">Traditional</text>
+  <text x="164" y="1110" fill="#6E5A63" font-size="24" font-family="Arial, Helvetica, sans-serif">19 June 2026</text>
+  <text x="164" y="1150" fill="#6E5A63" font-size="24" font-family="Arial, Helvetica, sans-serif">11:00 AM</text>
+  <text x="164" y="1190" fill="#6E5A63" font-size="22" font-family="Arial, Helvetica, sans-serif">Baba Ijo Hall, Oke Agbo</text>
+
+  <text x="486" y="1000" fill="#BF798D" font-size="20" font-family="Arial, Helvetica, sans-serif" letter-spacing="5">SATURDAY</text>
+  <text x="486" y="1058" fill="#4F2433" font-size="52" font-family="Georgia, Times New Roman, serif">White Wedding</text>
+  <text x="486" y="1110" fill="#6E5A63" font-size="24" font-family="Arial, Helvetica, sans-serif">20 June 2026</text>
+  <text x="486" y="1150" fill="#6E5A63" font-size="24" font-family="Arial, Helvetica, sans-serif">10:00 AM</text>
+  <text x="486" y="1190" fill="#6E5A63" font-size="22" font-family="Arial, Helvetica, sans-serif">St. Philips Anglican Church</text>
+
+  <text x="808" y="1000" fill="#A97A33" font-size="20" font-family="Arial, Helvetica, sans-serif" letter-spacing="5">RECEPTION</text>
+  <text x="808" y="1058" fill="#4F2433" font-size="52" font-family="Georgia, Times New Roman, serif">Celebration</text>
+  <text x="808" y="1110" fill="#6E5A63" font-size="24" font-family="Arial, Helvetica, sans-serif">Immediately after church</text>
+  <text x="808" y="1150" fill="#6E5A63" font-size="22" font-family="Arial, Helvetica, sans-serif">Women Conference Center</text>
+  <text x="808" y="1190" fill="#6E5A63" font-size="22" font-family="Arial, Helvetica, sans-serif">Oke Alafia, Oke Agbo</text>
+
+  <line x1="220" y1="1278" x2="980" y2="1278" stroke="#E9DED3"/>
+
+  <text x="600" y="1354" text-anchor="middle" fill="#7A6470" font-size="24" font-family="Arial, Helvetica, sans-serif" letter-spacing="6">
+    SAVE THE DATE
+  </text>
+  <text x="600" y="1426" text-anchor="middle" fill="#4F2433" font-size="54" font-family="Georgia, Times New Roman, serif">
+    19 and 20 June 2026
+  </text>
+  <text x="600" y="1486" text-anchor="middle" fill="#6E5A63" font-size="24" font-family="Arial, Helvetica, sans-serif">
+    A celebration of love, grace, and joyful beginnings
+  </text>
+</svg>
