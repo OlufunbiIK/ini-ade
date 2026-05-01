@@ -62,7 +62,7 @@ export default function HeroSection() {
             <button
               onClick={(e) => { e.stopPropagation(); setMenuOpen((p) => !p); }}
               aria-label={menuOpen ? "Close menu" : "Open menu"}
-              className="flex h-11 w-11 flex-col items-center justify-center gap-[5px] rounded-full border border-white/70 bg-white/80 shadow-[0_8px_24px_rgba(93,36,54,0.10)] backdrop-blur transition-all active:scale-95"
+              className="flex h-11 w-11 flex-col items-center justify-center gap-1.25 rounded-full border border-white/70 bg-white/80 shadow-[0_8px_24px_rgba(93,36,54,0.10)] backdrop-blur transition-all active:scale-95"
             >
               <span className="block h-[1.5px] w-5 rounded-full bg-[#6d2039] transition-all duration-300 origin-center"
                 style={{ transform: menuOpen ? "translateY(6.5px) rotate(45deg)" : "none" }} />
@@ -82,7 +82,7 @@ export default function HeroSection() {
             className="sm:hidden absolute top-14 left-0 z-50 overflow-hidden rounded-[1.4rem] border border-white/70 bg-white/90 shadow-[0_16px_45px_rgba(93,36,54,0.13)] backdrop-blur transition-all duration-300 ease-in-out"
             style={{ maxHeight: menuOpen ? "400px" : "0px", opacity: menuOpen ? 1 : 0, pointerEvents: menuOpen ? "auto" : "none" }}
           >
-            <div className="flex flex-col p-2 min-w-[180px]">
+            <div className="flex flex-col p-2 min-w-45">
               {navLinks.map((link, i) => (
                 <a
                   key={link.href}
@@ -91,12 +91,12 @@ export default function HeroSection() {
                   className="flex items-center gap-3 rounded-xl px-4 py-3 text-[13px] font-medium text-[#6b4d59] transition-colors hover:bg-[#f9f0f3] hover:text-[#522334]"
                   style={{ transitionDelay: menuOpen ? `${i * 40}ms` : "0ms" }}
                 >
-                  <span className="h-1 w-1 rounded-full bg-[#d6ad62] flex-shrink-0" />
+                  <span className="h-1 w-1 rounded-full bg-[#d6ad62] shrink-0" />
                   {link.label}
                 </a>
               ))}
             </div>
-            <div className="h-1 w-full bg-gradient-to-r from-[#d6ad62]/30 via-[#f3c8d0]/40 to-[#d9e2d7]/30" />
+            <div className="h-1 w-full bg-linear-to-r from-[#d6ad62]/30 via-[#f3c8d0]/40 to-[#d9e2d7]/30" />
           </div>
         </nav>
 
@@ -125,14 +125,14 @@ export default function HeroSection() {
             </h1>
 
             <div className="my-4 flex items-center justify-center gap-4">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#d6ad62]/50 sm:w-28" />
+              <div className="h-px w-16 bg-linear-to-r from-transparent to-[#d6ad62]/50 sm:w-28" />
               <span
                 className="metallic-text font-serif leading-none"
                 style={{ fontSize: "clamp(2rem, 5vw, 3.4rem)" }}
               >
                 &amp;
               </span>
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#d6ad62]/50 sm:w-28" />
+              <div className="h-px w-16 bg-linear-to-l from-transparent to-[#d6ad62]/50 sm:w-28" />
             </div>
 
             <h1
@@ -150,9 +150,9 @@ export default function HeroSection() {
 
           {/* Divider */}
           <div className="mt-6 flex items-center gap-3">
-            <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#d6ad62]/40" />
+            <div className="h-px w-12 bg-linear-to-r from-transparent to-[#d6ad62]/40" />
             <span className="text-[#d6ad62]/60 text-base">✦</span>
-            <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#d6ad62]/40" />
+            <div className="h-px w-12 bg-linear-to-l from-transparent to-[#d6ad62]/40" />
           </div>
 
           {/* Tagline */}
