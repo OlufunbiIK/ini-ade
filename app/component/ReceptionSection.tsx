@@ -7,7 +7,7 @@ export default function ReceptionSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
-            <div className="deep-card pattern-lattice relative aspect-[0.96] overflow-hidden rounded-[2rem]">
+            <div className="deep-card pattern-lattice relative aspect-[0.96] overflow-hidden rounded-4xl">
               <div className="pattern-petals absolute inset-0 opacity-60" />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_20%,rgba(255,255,255,0.18)_0%,transparent_20%),radial-gradient(circle_at_76%_20%,rgba(244,221,177,0.2)_0%,transparent_18%),radial-gradient(circle_at_50%_82%,rgba(255,255,255,0.1)_0%,transparent_22%)]" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(90,29,48,0.12)_0%,rgba(90,29,48,0.34)_42%,rgba(62,16,31,0.88)_100%)]" />
@@ -31,23 +31,13 @@ export default function ReceptionSection() {
           <div>
             <SectionHeading
               eyebrow="Before You Come"
-              title="Everything you need is easy to find and easy to follow"
-              subtitle="The day has been planned to feel smooth, warm, and mobile-friendly, especially for guests checking details on their phones."
+              title=""
+              subtitle=""
             />
 
-            <div className="mt-6 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-              {arrivalNotes.map((note, index) => (
-                <div key={note.title} className="surface-card rounded-[1.7rem] p-5">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#b26f82]">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="mt-3 font-serif text-2xl text-[#512535]">{note.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-[#6b515c]">{note.body}</p>
-                </div>
-              ))}
-            </div>
+   
 
-            <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
               {guestGuideVenues.map((venue) => (
                 <div key={venue.title} className="surface-card rounded-[1.8rem] p-5">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#a67830]">

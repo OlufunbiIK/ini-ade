@@ -33,74 +33,95 @@ export default function GiftSection() {
           align="center"
         />
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-[1.08fr_0.92fr]">
-          <div className="deep-card rounded-[2.2rem] p-6 text-white sm:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#f5dfb0]">
-              Bank Transfer
-            </p>
-            <p className="mt-6 font-serif text-4xl leading-none sm:text-5xl">
+        <div className="mt-10 grid gap-4 lg:grid-cols-[1.08fr_0.92fr]">
+          {/* ── Bank Transfer card ── */}
+          <div className="deep-card rounded-[2.2rem] p-5 text-white sm:p-6">
+            <div className="flex items-center gap-2">
+              <span className="text-lg">🏦</span>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#f5dfb0]">
+                Bank Transfer
+              </p>
+            </div>
+
+            <p className="mt-4 font-serif text-3xl leading-none tracking-wide sm:text-4xl">
               {ACCOUNT_NUMBER}
             </p>
 
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-[1.5rem] border border-white/12 bg-white/10 p-4">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#f5dfb0]">
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              <div className="rounded-2xl border border-white/12 bg-white/10 px-3 py-2.5">
+                <p className="text-[9px] font-semibold uppercase tracking-[0.26em] text-[#f5dfb0]">
                   Account Name
                 </p>
-                <p className="mt-3 text-lg text-white/88">{ACCOUNT_NAME}</p>
+                <p className="mt-1.5 text-sm leading-snug text-white/88">{ACCOUNT_NAME}</p>
               </div>
-              <div className="rounded-[1.5rem] border border-white/12 bg-white/10 p-4">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#f5dfb0]">
+              <div className="rounded-2xl border border-white/12 bg-white/10 px-3 py-2.5">
+                <p className="text-[9px] font-semibold uppercase tracking-[0.26em] text-[#f5dfb0]">
                   Bank
                 </p>
-                <p className="mt-3 text-lg text-white/88">{BANK_NAME}</p>
+                <p className="mt-1.5 text-sm leading-snug text-white/88">{BANK_NAME}</p>
               </div>
             </div>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="mt-4 flex flex-wrap items-center gap-3">
               <button
                 type="button"
                 onClick={copyAccountNumber}
-                className="rounded-full bg-[#f5dfb0] px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#5e2436] shadow-[0_16px_40px_rgba(160,126,59,0.22)] hover:-translate-y-0.5 hover:bg-[#f3e5c2]"
+                className="flex items-center gap-1.5 rounded-full bg-[#f5dfb0] px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#5e2436] shadow-[0_12px_32px_rgba(160,126,59,0.22)] transition-transform hover:-translate-y-0.5 hover:bg-[#f3e5c2] active:scale-95"
               >
-                {copied ? "Account copied" : "Copy account number"}
+                <span>{copied ? "✓" : "⎘"}</span>
+                {copied ? "Copied!" : "Copy account"}
               </button>
-              <p aria-live="polite" className="text-sm leading-7 text-white/74">
+              <p aria-live="polite" className="text-xs leading-6 text-white/60">
                 {copied
-                  ? "The account number is ready to paste."
-                  : "Presence and prayers are more than enough, but gifts are deeply appreciated."}
+                  ? "Ready to paste 🎉"
+                  : "Tap to copy · paste into your banking app"}
               </p>
             </div>
           </div>
 
-          <div className="grid gap-5">
-            <div className="surface-card rounded-[2rem] p-6 sm:p-7">
-              <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#a67830]">
-                Gift Ideas
-              </p>
-              <div className="mt-4 space-y-4">
+          {/* ── Right column ── */}
+          <div className="grid gap-4">
+            {/* Gift Ideas */}
+            <div className="surface-card rounded-4xl p-5 sm:p-6">
+              <div className="flex items-center gap-2">
+                <span className="text-base">🎁</span>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#a67830]">
+                  Gift Ideas
+                </p>
+              </div>
+              <div className="mt-3 space-y-2.5">
                 {giftIdeas.map((idea) => (
-                  <div key={idea.title} className="rounded-[1.4rem] bg-[#fff7f1] p-4">
-                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#7b5d68]">
-                      {idea.title}
-                    </p>
-                    <p className="mt-2 text-sm leading-7 text-[#69505b]">{idea.body}</p>
+                  <div
+                    key={idea.title}
+                    className="flex gap-3 rounded-2xl bg-[#fff7f1] px-4 py-3"
+                  >
+                    <div>
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7b5d68]">
+                        {idea.title}
+                      </p>
+                      <p className="mt-1 text-xs leading-6 text-[#69505b]">{idea.body}</p>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="surface-card rounded-[2rem] p-6 sm:p-7">
-              <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#a67830]">
-                Need Help?
-              </p>
-              <p className="mt-4 text-base leading-8 text-[#69505b]">
-                For questions around gifts, support, or any quick clarification, you can
-                reach out directly.
-              </p>
-              <div className="mt-5">
+            {/* Need Help */}
+            <div className="surface-card flex items-center justify-between gap-4 rounded-4xl p-5 sm:p-6">
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="text-base">💬</span>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#a67830]">
+                    Need Help?
+                  </p>
+                </div>
+                <p className="mt-1.5 text-xs leading-6 text-[#69505b]">
+                  Any questions about gifts? Just give us a ring.
+                </p>
+              </div>
+              <div className="shrink-0">
                 <LinkPill href={`tel:${CONTACT_PHONE}`} variant="primary">
-                  Call {CONTACT_PHONE}
+                  Call us
                 </LinkPill>
               </div>
             </div>

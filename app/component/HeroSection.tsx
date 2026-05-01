@@ -54,17 +54,13 @@ export default function HeroSection() {
               Friday 19 June 2026 and Saturday 20 June 2026
             </p>
 
-            <h1 className="hero-title mt-5 font-serif text-[3.45rem] leading-[0.92] text-[#512535] sm:text-[4.75rem] lg:text-[6rem]">
+            <h1 className="hero-title mt-5 font-serif text-[3.45rem] leading-[0.92] text-[#512535] sm:text-[4.75rem] lg:text-[4rem]">
               Inioluwa Rhoda
               <span className="metallic-text block py-2">&amp;</span>
               Adeboye Amos
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-[#68515b] sm:text-lg">
-              Two hearts, one testimony, and a weekend full of warmth, beauty, prayer,
-              and celebration. This experience is designed to feel sweet, soft, and
-              memorable from the very first scroll.
-            </p>
+           
 
             <div className="mt-6 flex flex-wrap gap-2">
               {heroHighlights.map((item) => (

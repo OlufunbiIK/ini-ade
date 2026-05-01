@@ -37,7 +37,7 @@ export default function GallerySection() {
           subtitle="Just the images, sliding softly."
         />
 
-        <div className="mx-auto mt-10 max-w-[22rem] sm:max-w-[34rem] lg:max-w-[48rem] xl:max-w-[52rem]">
+        <div className="mx-auto mt-10 max-w-88 sm:max-w-136 lg:max-w-3xl xl:max-w-208">
           <div className="surface-card overflow-hidden rounded-[2.5rem] p-3 sm:p-4">
             <div className="overflow-hidden rounded-[1.9rem]">
               <div

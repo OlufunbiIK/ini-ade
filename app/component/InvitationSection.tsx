@@ -10,11 +10,11 @@ export default function InvitationSection() {
           <div>
             <SectionHeading
               eyebrow="Invitation"
-              title="The original IV is still the piece guests can save"
-              subtitle="The main invitation stays simple here: preview it, download the actual image, and keep it handy on your phone for the wedding weekend."
+              title=""
+              subtitle=""
             />
 
-            <div className="surface-card mt-6 rounded-[2rem] p-6 sm:p-8">
+            <div className="surface-card mt-6 rounded-4xl p-6 sm:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a97a33]">
                 Original invite image
               </p>
