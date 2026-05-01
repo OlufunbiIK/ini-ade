@@ -38,29 +38,10 @@ export default function InvitationSection() {
               </div>
             </div>
 
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              <div className="surface-card rounded-[1.7rem] p-5">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#bf798d]">
-                  Mobile friendly
-                </p>
-                <p className="mt-3 text-sm leading-7 text-[#6d5560]">
-                  The invitation keeps its original look when saved to a phone or shared
-                  as a quick image preview.
-                </p>
-              </div>
-              <div className="surface-card rounded-[1.7rem] p-5">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#a97a33]">
-                  Easy to reuse
-                </p>
-                <p className="mt-3 text-sm leading-7 text-[#6d5560]">
-                  This keeps the original IV as the main downloadable piece while the rest
-                  of the page stays cleaner and more modern.
-                </p>
-              </div>
-            </div>
+          
           </div>
 
-          <div className="mx-auto w-full max-w-[34rem] surface-card rounded-[2rem] p-4 sm:p-5">
+          <div className="mx-auto w-full max-w-136 surface-card rounded-4xl p-4 sm:p-5">
             <div className="overflow-hidden rounded-[1.7rem] border border-[#efe3d7] bg-[#fffaf4] shadow-[0_24px_60px_rgba(88,33,53,0.08)]">
               <Image
                 src={INVITATION_DOWNLOAD_PATH}

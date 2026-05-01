@@ -113,29 +113,7 @@ export default function HeroSection() {
 
             <InvitationCard compact />
 
-            <div className="surface-card relative -mt-10 ml-4 max-w-[18rem] rounded-[1.85rem] p-4 sm:-mt-14 sm:ml-auto sm:mr-4 sm:max-w-[18.5rem]">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#a5772d]">
-                Guest actions
-              </p>
-              <div className="mt-3 grid gap-3">
-                <div className="rounded-[1.3rem] bg-[#fff7ef] p-4">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#9f6c29]">
-                    Save the IV
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-[#6d5560]">
-                    Download the invitation and keep it handy on your phone.
-                  </p>
-                </div>
-                <div className="rounded-[1.3rem] bg-[#fff3f6] p-4">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#b36f83]">
-                    RSVP
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-[#6d5560]">
-                    Share your name, email, and attendance so the form is ready for your sheet hookup.
-                  </p>
-                </div>
-              </div>
-            </div>
+         
           </div>
         </div>
       </div>

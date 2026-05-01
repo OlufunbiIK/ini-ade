@@ -37,13 +37,6 @@ export default function StorySection() {
               subtitle="Their beginning was simple, but every season that followed carried more warmth, intention, and joy."
             />
 
-            <div className="surface-card mt-6 space-y-5 rounded-[2rem] p-6 sm:p-8">
-              {storyParagraphs.map((paragraph) => (
-                <p key={paragraph} className="text-base leading-8 text-[#654c57] sm:text-lg">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
               {storyMoments.map((item) => (
