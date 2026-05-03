@@ -71,12 +71,47 @@ export default function FooterSection() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col gap-2 text-center text-sm text-white/56 sm:flex-row sm:items-center sm:justify-between sm:text-left">
-          <div>
-            Copyright 2026 • {COUPLE_NAMES}
-          </div>
-          <div>Designed by @eventlybuilt</div>
-        </div>
+        <div className="mt-6 flex flex-col gap-3 text-center text-sm text-white/56 sm:flex-row sm:items-center sm:justify-between sm:text-left">
+  <div>
+    Copyright 2026 • {COUPLE_NAMES}
+  </div>
+
+  {/* Socials */}
+  <div className="flex items-center justify-center gap-4 sm:justify-start">
+    <a
+      href="https://www.linkedin.com/in/olufunbi-ibrahim-2bb29922a/"
+      target="_blank"
+      className="hover:text-white transition-colors"
+    >
+      LinkedIn
+    </a>
+    <a
+      href="https://twitter.com/IbrahimOlufunbi"
+      target="_blank"
+      className="hover:text-white transition-colors"
+    >
+      Twitter
+    </a>
+    <a
+      href="https://instagram.com/eventlybuilt"
+      target="_blank"
+      className="hover:text-white transition-colors"
+    >
+      Instagram
+    </a>
+    <a
+      href="https://tiktok.com/@eventlybuilt"
+      target="_blank"
+      className="hover:text-white transition-colors"
+    >
+      TikTok
+    </a>
+  </div>
+
+  <div>
+    Designed by @eventlybuilt • olufunbiibrahim@gmail.com
+  </div>
+</div>
       </div>
     </footer>
   );

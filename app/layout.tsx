@@ -5,7 +5,14 @@ export const metadata: Metadata = {
   title: "Inioluwa Rhoda & Adeboye Amos | Wedding Celebration",
   description:
     "Celebrate the wedding of Inioluwa Rhoda and Adeboye Amos in Ijebu Igbo on Friday, 19 June 2026 and Saturday, 20 June 2026.",
-  openGraph: {
+ 
+    icons: {
+      icon: "/ini-ade-invitation.jpeg", // 👈 add this
+      shortcut: "/ini-ade-invitation.jpeg",
+      apple: "/ini-ade-invitation.jpeg",
+    },
+
+    openGraph: {
     title: "Inioluwa Rhoda & Adeboye Amos | Wedding Celebration",
     description:
       "Celebrate the wedding of Inioluwa Rhoda and Adeboye Amos in Ijebu Igbo on Friday, 19 June 2026 and Saturday, 20 June 2026.",

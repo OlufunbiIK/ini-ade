@@ -45,7 +45,7 @@ export default function HeroSection() {
         {/* ── Nav ── */}
         <nav aria-label="Section navigation" className="relative mb-8">
           {/* Desktop: full pill nav */}
-          <div className="nav-pill hidden sm:flex w-full gap-1 overflow-x-auto rounded-full border border-white/70 bg-white/72 p-1.5 shadow-[0_16px_45px_rgba(93,36,54,0.08)] backdrop-blur sm:max-w-max">
+          <div className="nav-pill hidden sm:flex mx-auto w-fit gap-1 overflow-x-auto rounded-full border border-white/70 bg-white/72 p-1.5 shadow-[0_16px_45px_rgba(93,36,54,0.08)] backdrop-blur">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -191,10 +191,10 @@ export default function HeroSection() {
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#d6ad62]" />
             </div>
             <div className="grid grid-cols-4 gap-2 px-4 py-4 sm:gap-3 sm:px-6 sm:py-5">
-              <CountdownTile value={countdown.days} label="Days" />
-              <CountdownTile value={countdown.hours} label="Hrs" />
-              <CountdownTile value={countdown.minutes} label="Mins" />
-              <CountdownTile value={countdown.seconds} label="Secs" />
+            <CountdownTile value={mounted ? countdown.days : "--"} label="Days" />
+<CountdownTile value={mounted ? countdown.hours : "--"} label="Hrs" />
+<CountdownTile value={mounted ? countdown.minutes : "--"} label="Mins" />
+<CountdownTile value={mounted ? countdown.seconds : "--"} label="Secs" />
             </div>
             <p className="border-t border-[#eadcdf] px-4 py-3 text-center text-[11px] leading-5 text-[#8a7278]">
               {countdown.isLive

@@ -65,9 +65,12 @@ export type GiftIdea = {
 export const COUPLE_NAMES = "Inioluwa Rhoda & Adeboye Amos";
 export const INVITATION_DOWNLOAD_PATH = "/ini-ade-invitation.jpeg";
 export const CONTACT_PHONE = "08054224470";
-export const BANK_NAME = "GTBank";
-export const ACCOUNT_NAME = "Adeboye Amos";
-export const ACCOUNT_NUMBER = "0123456789";
+export const BANK_NAME = "MoniePoint";
+export const ACCOUNT_NAME = "Inioluwa Rhoda Masominu";
+export const ACCOUNT_NUMBER = "7068898037";
+
+export const ADMIN_PASSWORD = "rhoda-amos";
+export const SHEET_CSV_URL  = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQXeHp4_GUILVHKrqGYU2tbKAE0oh7QVntQ-P5P42HvmYb1ynnur37rKWNWB7kZQIMD3L6OTomIRvav/pub?gid=255578696&single=true&output=csv";
 
 export const TRADITIONAL_WEDDING_TIME = new Date("2026-06-19T11:00:00+01:00").getTime();
 
