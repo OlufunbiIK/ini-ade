@@ -369,7 +369,7 @@ export default function RsvpSection() {
           </div>
 
           {/* Panel body */}
-          <div className="relative min-h-[240px]">
+          <div className="relative min-h-60">
 
             {/* Guest rows — blurred when locked */}
             <div
@@ -403,7 +403,7 @@ export default function RsvpSection() {
                       </div>
                       <span
                         className={cn(
-                          "shrink-0 rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.1em]",
+                          "shrink-0 rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest",
                           pillStyle[guest.attendance] ?? "bg-[#eadcdf] text-[#5f2436]",
                         )}
                       >
