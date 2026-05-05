@@ -192,7 +192,13 @@ export default function RsvpSection() {
     setGuests([]);
   };
 
+  const hasMounted = useRef(false);
+
   useEffect(() => {
+    if (!hasMounted.current) {
+      hasMounted.current = true;
+      return; // skip the first run
+    }
     if (lockStatus === "locked") passwordInputRef.current?.focus();
   }, [lockStatus]);
 
