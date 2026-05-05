@@ -5,7 +5,8 @@ import {
   ACCOUNT_NAME,
   ACCOUNT_NUMBER,
   BANK_NAME,
-  CONTACT_PHONE,
+  CONTACT_PHONE_ONE,
+  CONTACT_PHONE_TWO,
   giftIdeas,
 } from "../types/constant";
 import { LinkPill, SectionHeading } from "./ui";
@@ -106,25 +107,56 @@ export default function GiftSection() {
               </div>
             </div>
 
-            {/* Need Help */}
-            <div className="surface-card flex items-center justify-between gap-4 rounded-4xl p-5 sm:p-6">
-              <div>
-                <div className="flex items-center gap-2">
-                  <span className="text-base">💬</span>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#a67830]">
-                    Need Help?
-                  </p>
-                </div>
-                <p className="mt-1.5 text-xs leading-6 text-[#69505b]">
-                  Any questions about gifts? Just give us a ring.
-                </p>
-              </div>
-              <div className="shrink-0">
-                <LinkPill href={`tel:${CONTACT_PHONE}`} variant="primary">
-                  Call us
-                </LinkPill>
-              </div>
-            </div>
+{/* Need Help */}
+<div className="surface-card flex flex-col lg:flex-row lg:items-center justify-between gap-6 rounded-4xl p-5 sm:p-6">
+
+  {/* Left text */}
+  <div className="lg:max-w-md">
+    <div className="flex items-center gap-2">
+      <span className="text-base">💬</span>
+      <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#a67830]">
+        Need Help?
+      </p>
+    </div>
+
+    <p className="mt-2 text-xs leading-6 text-[#69505b]">
+      Any questions about gifts? Just give us a ring.
+    </p>
+  </div>
+
+  {/* Right actions */}
+  <div className="flex w-full flex-col sm:flex-row lg:w-auto gap-4">
+
+    {/* Contact 1 */}
+    <div className="flex flex-col gap-2">
+      <p className="text-xs font-medium text-[#69505b] whitespace-nowrap">
+        Damilola
+      </p>
+      <LinkPill
+        href={`tel:${CONTACT_PHONE_ONE}`}
+        variant="primary"
+        className="whitespace-nowrap"
+      >
+        Call us
+      </LinkPill>
+    </div>
+
+    {/* Contact 2 */}
+    <div className="flex flex-col gap-2">
+      <p className="text-xs font-medium text-[#69505b] whitespace-nowrap">
+        Olakiitan
+      </p>
+      <LinkPill
+        href={`tel:${CONTACT_PHONE_TWO}`}
+        variant="primary"
+        className="whitespace-nowrap"
+      >
+        Call us
+      </LinkPill>
+    </div>
+
+  </div>
+</div>
           </div>
         </div>
       </div>

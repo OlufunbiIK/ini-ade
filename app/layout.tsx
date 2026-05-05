@@ -7,8 +7,11 @@ export const metadata: Metadata = {
     "Celebrate the wedding of Inioluwa Rhoda and Adeboye Amos in Ijebu Igbo on Friday, 19 June 2026 and Saturday, 20 June 2026.",
  
     icons: {
-      icon: "/ini-ade-invitation.jpeg", // 👈 add this
-      shortcut: "/ini-ade-invitation.jpeg",
+      icon: [
+        { url: "/favicon.ico" },
+        { url: "/ini-ade-invitation.jpeg", type: "image/jpeg" },
+      ],
+      shortcut: "/favicon.ico",
       apple: "/ini-ade-invitation.jpeg",
     },
 

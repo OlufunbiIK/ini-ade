@@ -64,7 +64,9 @@ export type GiftIdea = {
 
 export const COUPLE_NAMES = "Inioluwa Rhoda & Adeboye Amos";
 export const INVITATION_DOWNLOAD_PATH = "/ini-ade-invitation.jpeg";
-export const CONTACT_PHONE = "08054224470";
+export const CONTACT_PHONE_ONE = "09011590857";
+export const CONTACT_PHONE_TWO = "09068865349";
+
 export const BANK_NAME = "MoniePoint";
 export const ACCOUNT_NAME = "Inioluwa Rhoda Masominu";
 export const ACCOUNT_NUMBER = "7068898037";

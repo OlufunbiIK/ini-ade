@@ -87,7 +87,7 @@ export function LinkPill({
   return (
     <a
       className={cn(
-        "inline-flex items-center justify-center rounded-full px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em]",
+       "inline-flex w-full sm:w-auto items-center justify-center rounded-full px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em]",
         variantClasses[variant],
         className,
       )}

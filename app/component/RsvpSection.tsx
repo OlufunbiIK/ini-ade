@@ -3,10 +3,11 @@
 import { type ChangeEvent, type FormEvent, useEffect, useRef, useState } from "react";
 import {
   ADMIN_PASSWORD,
-  CONTACT_PHONE,
   SHEET_CSV_URL,
   type RsvpChoice,
   rsvpMessages,
+  CONTACT_PHONE_ONE,
+  CONTACT_PHONE_TWO,
 } from "../types/constant";
 import { LinkPill, SectionHeading, cn } from "./ui";
 
@@ -208,28 +209,58 @@ export default function RsvpSection() {
         {/* ── Top: heading + form ── */}
         <div className="grid gap-5 lg:grid-cols-[0.86fr_1.14fr]">
 
-          {/* Left: heading + quick contact */}
-          <div className="flex flex-col justify-between gap-5">
-            <SectionHeading
-              eyebrow="RSVP"
-              title="Will you share this joy with us?"
-              subtitle="Let us know so we can save your seat."
-              tone="light"
-            />
-            <div className="rounded-4xl border border-white/14 bg-white/10 p-5 text-white/84 backdrop-blur">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#f5dfb0]">
-                💬 Quick Contact
-              </p>
-              <p className="mt-2 text-sm leading-6 text-white/70">
-                Questions about directions or dress code? Just call.
-              </p>
-              <div className="mt-4">
-                <LinkPill href={`tel:${CONTACT_PHONE}`} variant="ghost">
-                  Call {CONTACT_PHONE}
-                </LinkPill>
-              </div>
-            </div>
-          </div>
+         {/* Left: heading + quick contact */}
+<div className="flex flex-col justify-between gap-6">
+
+<SectionHeading
+  eyebrow="RSVP"
+  title="Will you share this joy with us?"
+  subtitle="Let us know so we can save your seat."
+  tone="light"
+/>
+
+<div className="rounded-4xl border border-white/14 bg-white/10 p-5 text-white/84 backdrop-blur">
+  
+  <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#f5dfb0]">
+    💬 Quick Contact
+  </p>
+
+  <p className="mt-2 text-sm leading-6 text-white/70">
+    Questions about directions or dress code? Just call.
+  </p>
+
+  {/* Contacts */}
+  <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:gap-6">
+
+    {/* Contact 1 */}
+    <div className="flex flex-col gap-2">
+      <p className="text-xs font-medium text-white/70">
+        Damilola
+      </p>
+      <LinkPill
+        href={`tel:${CONTACT_PHONE_ONE}`}
+        variant="ghost"
+      >
+        Call {CONTACT_PHONE_ONE}
+      </LinkPill>
+    </div>
+
+    {/* Contact 2 */}
+    <div className="flex flex-col gap-2">
+      <p className="text-xs font-medium text-white/70">
+        Olakiitan
+      </p>
+      <LinkPill
+        href={`tel:${CONTACT_PHONE_TWO}`}
+        variant="ghost"
+      >
+        Call {CONTACT_PHONE_TWO}
+      </LinkPill>
+    </div>
+
+  </div>
+</div>
+</div>
 
           {/* Right: RSVP form */}
           <div className="surface-card rounded-[2.2rem] p-5 sm:p-6">

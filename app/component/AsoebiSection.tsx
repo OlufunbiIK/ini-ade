@@ -1,4 +1,6 @@
-import { CONTACT_PHONE, asoebiOptions, paletteCards } from "../types/constant";
+"Use client";
+
+import { CONTACT_PHONE_TWO,CONTACT_PHONE_ONE, asoebiOptions, paletteCards } from "../types/constant";
 import { LinkPill, SectionHeading } from "./ui";
 
 export default function AsoebiSection() {
@@ -24,20 +26,42 @@ export default function AsoebiSection() {
               tone="light"
             />
 
-            {/* Fabric contact — inline layout */}
-            <div className="rounded-4xl border border-white/14 bg-white/10 p-5 backdrop-blur">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#f5dfb0]">
-                🧵 Fabric Contact
-              </p>
-              <p className="mt-2 text-sm leading-6 text-white/70">
-                For asoebi reservations, gele, or style questions — just call.
-              </p>
-              <div className="mt-4">
-                <LinkPill href={`tel:${CONTACT_PHONE}`} variant="ghost">
-                  Call {CONTACT_PHONE}
-                </LinkPill>
-              </div>
-            </div>
+          {/* Fabric contact — inline layout */}
+<div className="rounded-4xl border border-white/14 bg-white/10 p-5 backdrop-blur">
+
+<p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#f5dfb0]">
+  🧵 Fabric Contact
+</p>
+
+<p className="mt-2 text-sm leading-6 text-white/70">
+  For asoebi reservations, gele, or style questions — just call.
+</p>
+
+{/* Contacts */}
+<div className="mt-4 flex flex-col gap-4 sm:flex-row sm:gap-6">
+
+  {/* Person 1 */}
+  <div className="flex flex-col gap-2">
+    <p className="text-xs font-medium text-white/70">
+      Damilola
+    </p>
+    <LinkPill href={`tel:${CONTACT_PHONE_ONE}`} variant="ghost">
+      Call {CONTACT_PHONE_ONE}
+    </LinkPill>
+  </div>
+
+  {/* Person 2 */}
+  <div className="flex flex-col gap-2">
+    <p className="text-xs font-medium text-white/70">
+      Olakiitan
+    </p>
+    <LinkPill href={`tel:${CONTACT_PHONE_TWO}`} variant="ghost">
+      Call {CONTACT_PHONE_TWO}
+    </LinkPill>
+  </div>
+
+</div>
+</div>
           </div>
 
           {/* Right: palette cards */}
